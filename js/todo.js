@@ -1,5 +1,12 @@
 $(document).ready(function(){
-  // call functions here
+  submitForm()
 });
 
-// define functions here
+function submitForm(){
+  $('form').on('submit', (e)=>{
+    e.preventDefault()
+    let item = $('#item').val()
+    $('#list ol')[0].innerHTML +=
+    `<li>${item}</li>`
+  })
+}
